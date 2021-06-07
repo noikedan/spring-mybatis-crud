@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <th:block th:insert="fragments/base :: header"></th:block>
+</head>
+<body>
+  <div class="container-fluid">
+    <h4>MyBatis APP</h4>
+
+    <form th:action="@{/process}" th:object="${staff}"
+      method="post" novalidate>
+      <input type="hidden" th:field="*{id}">
+
+      <div class="form-group">
+        <label for="name">名前:</label>
+        <input type="text" class="form-control"
+          th:errorclass="is-invalid" th:field="*{name}">
+        <div class="invalid-feedback" th:errors="*{name}"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-Mail:</label>
+        <input type="email" class="form-control"
+          th:errorclass="is-invalid" th:field="*{email}">
+        <div class="invalid-feedback" th:errors="*{email}"></div>
+      </div>
+
+      <button class="btn btn-outline-primary px-5">
+        <i class="fa fa-file"></i>
+        保存
+      </button>
+    </form>
+  </div>
+
+  <th:block th:insert="fragments/base :: scripts"></th:block>
+</body>
+</html>
