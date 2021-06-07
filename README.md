@@ -1,5 +1,5 @@
 # spring-mybatis-crud  
-## SpringBootの機能を確認するためのWebサービス
+## スタッフ登録用Webサービス
 
 
 
