@@ -19,6 +19,12 @@
 	</properties>
 
 	<dependencies>
+<!-- dependenciesタグ内に、以下を追加します -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
